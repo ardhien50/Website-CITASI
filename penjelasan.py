@@ -13,8 +13,17 @@ def resize_image(image, size):
     return resized_image
 
 def app():
-    st.write('Penjelasan')
+    # Menambahkan judul untuk video
+    st.subheader("Video Pameran Citasi")
 
+    # HTML code untuk menyematkan video YouTube
+    video_html = """
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/f7Jt8BxxELI" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>"""
+    
+    # Menampilkan video di Streamlit
+    st.markdown(video_html, unsafe_allow_html=True)
+
+    #Menampilkan informasi Web CITASI
     st.subheader("Website Citasi")
 
     image_url = "https://github.com/ardhien50/Website-CITASI/blob/Front-End/Gambar/Logo%20Website%20Citasi.png?raw=true"
@@ -146,7 +155,6 @@ def app():
         st.link_button('Baca Selengkapnya', 'https://www.detik.com/edu/detikpedia/d-6280990/mengenal-fosfat-dan-kegunaannya-dalam-kehidupan-manusia')
 
     with col3:
-        with col3:
         st.subheader('9. IP (Indeks Pencemaran)')
         st.write('Indeks Pencemaran Kualitas Air Sungai (IP) digunakan untuk mengukur tingkat pencemaran air berdasarkan parameter seperti pH, suhu, oksigen terlarut (DO), kebutuhan oksigen biokimia (BOD), kekeruhan, total padatan tersuspensi (TSS), fosfat, nitrat, dan jumlah faecal coliform. Berdasarkan nilai IP, kualitas air diklasifikasikan sebagai berikut:')
         st.write('1. Tidak Tercemar/Memenuhi Baku Mutu (0 ≤ IP ≤ 1): Air masih bersih dan sesuai standar.')
@@ -156,6 +164,7 @@ def app():
         st.write('Indeks ini membantu dalam mengidentifikasi tingkat pencemaran dan menentukan langkah pengendalian yang diperlukan untuk menjaga kualitas air dan ekosistem.')
         st.link_button('Baca Selengkapnya', 'https://ppkl.menlhk.go.id/website/filebox/502/180719182446Indeks%20Kualitas%20Air.pdf')
 
+    #Menampilkan info Team Capstone Project "CITASI"
     st.subheader('Team Capstone')
     with st.container():
         col1, col2, col3 = st.columns(3)
